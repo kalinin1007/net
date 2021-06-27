@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.2.8.2 (Linux)"/>
+	<meta name="created" content="2021-06-26T19:30:45"/>
+	<meta name="changed" content="2021-06-26T19:34:33"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; color: #000000; line-height: 115%; text-align: left; orphans: 2; widows: 2; background: transparent }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: ru-RU }
+		p.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "FreeSans"; font-size: 12pt; so-language: hi-IN }
+		h1 { margin-top: 0cm; margin-bottom: 0.42cm; direction: ltr; color: #000000; text-align: center; page-break-inside: avoid; orphans: 2; widows: 2; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Arial", serif; font-size: 16pt; so-language: ru-RU; font-weight: bold }
+		h1.cjk { font-family: "Calibri"; font-size: 16pt; so-language: zh-CN; font-weight: bold }
+		h1.ctl { font-family: "DejaVu Sans"; font-size: 16pt; so-language: hi-IN }
+		h2 { margin-top: 0.07cm; margin-bottom: 0cm; direction: ltr; color: #000000; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Arial", serif; font-size: 14pt; so-language: ru-RU; font-weight: bold }
+		h2.cjk { font-family: "Calibri"; font-size: 14pt; so-language: zh-CN; font-weight: bold }
+		h2.ctl { font-family: "DejaVu Sans"; font-size: 13pt; so-language: hi-IN }
+		h3 { margin-top: 0.07cm; margin-bottom: 0cm; direction: ltr; color: #000000; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Arial", serif; font-size: 12pt; so-language: ru-RU; font-weight: bold }
+		h3.cjk { font-family: "Calibri"; font-size: 12pt; so-language: zh-CN; font-weight: bold }
+		h3.ctl { font-family: "DejaVu Sans"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="ru-RU" text="#000000" link="#000080" vlink="#800000" dir="ltr"><h1 class="western"><a name="_Toc75165419"></a><a name="_Toc75173970"></a><a name="_Toc75173136"></a><a name="_Toc75173027"></a>
+Раздел 6. Развертывание, настройка и
+поддержка сервисов</h1>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="_Toc75173028"></a><a name="_Toc75173971"></a><a name="_Toc75173137"></a>
+6.1 Обзор основных принципов организации
+сервисов в рамках информационной
+инфраструктуры</h2>
+<p lang="x-none" align="left" style="margin-bottom: 0cm; line-height: 150%">
+<img src="win_server_html_3e6552474e10fd66.png" name="Рисунок 24" align="bottom" width="624" height="351" border="0"/>
+</p>
+<center>
+	<table width="610" cellpadding="7" cellspacing="0">
+		<col width="237"/>
+
+		<col width="43"/>
+
+		<col width="289"/>
+
+		<tr valign="top">
+			<td width="237" style="background: transparent" style="border: none; padding: 0cm"><p class="western" align="justify" style="margin-bottom: 0cm">
+				Microsoft Certified</p>
+				<p class="western"><br/>
+
+				</p>
+			</td>
+			<td width="43" style="background: transparent" style="border: none; padding: 0cm"><p class="western">
+				<br/>
+
+				</p>
+			</td>
+			<td width="289" style="background: transparent" style="border: none; padding: 0cm"><p class="western" align="justify" style="margin-bottom: 0cm">
+				Microsoft Learn | Microsoft Docs</p>
+				<p class="western" align="justify"><br/>
+
+				</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td width="237" style="background: transparent" style="border: none; padding: 0cm"><p class="western">
+				<img src="win_server_html_8614a22d344abff7.png" name="Рисунок 25" align="bottom" width="236" height="236" border="0"/>
+</p>
+			</td>
+			<td width="43" style="background: transparent" style="border: none; padding: 0cm"><p class="western">
+				<br/>
+
+				</p>
+			</td>
+			<td width="289" style="background: transparent" style="border: none; padding: 0cm"><p class="western">
+				<img src="win_server_html_70fea731d88137cf.png" name="Рисунок 26" align="bottom" width="235" height="235" border="0"/>
+</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<p align="left" style="margin-bottom: 0cm; line-height: 150%"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 150%"><br/>
+
+</p>
+<h2 class="western"><a name="_Toc75173972"></a><a name="_Toc75173138"></a><a name="_Toc75173029"></a><a name="_n7ext52b73yn"></a>
+6.2 Базовые инфраструктурные и сетевые
+службы</h2>
+<h3 class="western"><a name="_Toc74064143"></a><a name="_Toc75173973"></a><a name="_Toc75173139"></a><a name="_Toc75173030"></a><a name="_Toc75165421"></a>
+6.2.1 Базовая конфигурации 
+</h3>
+<p class="western" align="justify" style="text-indent: 1.25cm; margin-bottom: 0cm; line-height: 100%">
+Первым этапом необходимо сделать базовую
+конфигурацию, а именно переименовать
+сервер для корректного инфицирование
+в сети.</p>
+<p class="western" align="justify" style="text-indent: 1.25cm; margin-bottom: 0cm; line-height: 100%">
+В<span lang="en-US"> </span>оснастке<span lang="en-US">
+server manager </span>переходим<span lang="en-US"> </span>на<span lang="en-US">
+</span>вкладку<span lang="en-US"> local server </span>в<span lang="en-US">
+Computer name. </span>Указываем имя, которое нам
+необходимо</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 100%">
+<img src="win_server_html_8872d79618f0faae.png" name="Рисунок 27" align="bottom" width="623" height="553" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Далее
+нам необходимо настроить время на
+сервере и часовой пояс. на вкладку local
+server выбираем пункт time zone.<img src="win_server_html_6d7eb9bb4ed83f7c.png" name="Рисунок 231" align="bottom" width="623" height="463" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Настройка
+сетевого интерфейса на сервере.</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><img src="win_server_html_633c997a78ac2659.png" name="Рисунок 232" align="bottom" width="623" height="353" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">Назначение
+статических сетевых настроек по протоколу
+TCP/IPv4</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><img src="win_server_html_6a51ff83a3ebbef0.png" name="Рисунок 233" align="bottom" width="623" height="380" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">Установка
+и настройка ролей осуществляется на в
+кладке Manage также есть возможность
+управлениями несколькими удаленными
+серверами.<img src="win_server_html_502117f9f9b5753b.png" name="Рисунок 234" align="bottom" width="624" height="467" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+<h3 class="western"><a name="_Toc75165422"></a><a name="_Toc75173974"></a><a name="_Toc75173140"></a><a name="_Toc75173031"></a><a name="_Toc73977783"></a><a name="_Toc74064144"></a>
+6.2.2 Роль ADDS</h3>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">Установка
+роли осуществляется отметкой в check box
+при выборе роли есть краткое описание
+ее назначения 
+</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 100%">
+<img src="win_server_html_51f40c34176a038f.png" name="Рисунок 240" align="bottom" width="657" height="363" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">В
+ходе установки и настройки может
+понадобиться перезагрузка при установке
+отметки сервер это сделает в автоматическом
+режиме 
+</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 100%">
+<img src="win_server_html_3a8c89063123dab1.png" name="Рисунок 241" align="bottom" width="568" height="354" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">После
+установки роли необходимо ее настроить,
+а именно указать имя нового домена и
+создать лес.</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%"><img src="win_server_html_fcabc1c0a9621fd1.png" name="Рисунок 237" align="bottom" width="624" height="392" border="0"/>
+Далее
+выбрать уровень работы леса и домена,
+задать криптостойки пароль для базы
+данных 
+</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 100%">
+<img src="win_server_html_b527f18f0cf837b1.png" name="Рисунок 238" align="bottom" width="490" height="318" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 100%">Перед
+завершение настроек сервер автоматически
+произведет валидацию конфигурации и
+даст рекомендации 
+</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 100%">
+<img src="win_server_html_cb9132dc54efac4f.png" name="Рисунок 239" align="bottom" width="535" height="380" border="0"/>
+</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 100%">
+В ходе завершения настройки сервер
+автоматически перезагрузиться 
+</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 108%">
+<img src="win_server_html_d291b3452e67175c.png" name="Рисунок 157" align="bottom" width="542" height="296" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<h3 class="western"><a name="_Toc75163209"></a><a name="_Toc75173975"></a><a name="_Toc75173141"></a><a name="_Toc75173032"></a><a name="_Toc75165423"></a><a name="_Toc75164146"></a><a name="_Toc74064145"></a><a name="_Toc73977784"></a><a name="_Toc75163506"></a>
+6.2.3 Роль DNS</h3>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 1.25cm; margin-bottom: 0cm; line-height: 100%">
+Необходимо также до конфигурировать
+DNS сервер. Создать обратную зону и
+добавить запись при необходимости</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><img src="win_server_html_a43ed3bb00f779c9.png" name="Рисунок 242" align="bottom" width="624" height="417" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Создаем
+новую primary zone 
+</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 108%">
+<img src="win_server_html_6ad61a1e7a558fe8.png" name="Рисунок 243" align="bottom" width="612" height="352" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%; page-break-before: always">
+Выбираем протокол для короткорого будет
+создана обратная зона IPv4.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><img src="win_server_html_f2f609b92f2b53e5.png" name="Рисунок 244" align="bottom" width="624" height="410" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%">Заполняем
+3 октета необходимой подсети</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 108%">
+<img src="win_server_html_3328c055895b2a87.png" name="Рисунок 245" align="bottom" width="604" height="420" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%; page-break-before: always">
+В прямой зоне выбираем запись типа А и
+добавляем ее в PTR</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><img src="win_server_html_efea5c25613e52b3.png" name="Рисунок 246" align="bottom" width="624" height="358" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%">Базовая
+конфигурация DNC закончена и можно
+проверить работоспособность используя
+команду nslookup 
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><img src="win_server_html_d55a02ef58d26458.png" name="Рисунок 247" align="bottom" width="624" height="346" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 108%"><br/>
+
+</p>
+<h3 class="western" style="page-break-before: always"><a name="_Toc73977785"></a><a name="_Toc75173976"></a><a name="_Toc75173142"></a><a name="_Toc75173033"></a><a name="_Toc75165424"></a><a name="_Toc74064146"></a>
+6.2.4 Роль DHCP</h3>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%">Установка
+роли DHCP производиться по аналогии с AD
+DS</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_f7a94e15fc3833e3.png" name="Рисунок 248" align="bottom" width="624" height="433" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%">Также
+указываем что бы сервер перезагрузился
+в автоматическом режиме если в этом
+будет необходимость</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_3660805f7f59acec.png" name="Рисунок 249" align="bottom" width="624" height="358" border="0"/>
+</p>
+<p lang="en-US" class="western" style="margin-bottom: 0.28cm; line-height: 108%">
+<br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%">В
+ходе до настройки необходимо указать
+пользователя под которым будет
+авторизирован сервер DHCP</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_67aa6e6bdfd6581c.png" name="Рисунок 250" align="bottom" width="624" height="382" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%">Создание
+нового DHPC scope 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_e9b5c6ff3466b8bf.png" name="Рисунок 251" align="bottom" width="624" height="431" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Задаем
+имя для DHPC scope</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_549bf7633d1a67cf.png" name="Рисунок 159" align="bottom" width="624" height="327" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Задаем
+диапазон адресов которые будут выдавать
+DHPC scope и маску подсети</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 108%">
+<img src="win_server_html_ab71a4494ddf5b33.png" name="Рисунок 252" align="bottom" width="549" height="436" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+Продолжим в оснастки автоматически
+конфигурировать дополнительные опции
+к DHPC scope если в этом есть необходимость</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_7fffde2762260d9f.png" name="Рисунок 253" align="bottom" width="624" height="403" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Зададим
+default gateway для нашей подсети которая
+является опцией 003</p>
+<p class="western" align="center" style="margin-bottom: 0.28cm; line-height: 108%">
+<img src="win_server_html_3497f2d8b3d2f95f.png" name="Рисунок 160" align="bottom" width="502" height="349" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Автоматически
+определиться DNS Domain Name опция 015 и адрес
+DNS сервера опция 006</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_752219f0aa9eb849.png" name="Рисунок 36" align="bottom" width="624" height="349" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Если
+все конфигурации правильные по завершению
+всех настроек можно указать отметку на
+yes после чего DHPC scope будет включен и
+начнет свою работу</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_5c15de1398776cce.png" name="Рисунок 37" align="bottom" width="624" height="393" border="0"/>
+</p>
+<p lang="en-US" class="western" style="margin-bottom: 0.28cm; line-height: 108%">
+<br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+В качестве проверки можно зайти на
+клиента и при помощи команды ipconfig /all
+убедится в том что мы получили адрес по
+IPv4 с правильными опциями</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_2bd2ffc04ba740b.png" name="Рисунок 38" align="bottom" width="624" height="382" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Добавление
+компьютера в домен 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_92586e79a9a04351.png" name="Рисунок 42" align="bottom" width="624" height="335" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<h3 class="western" style="page-break-before: always"><a name="_Toc73977786"></a><a name="_Toc75173977"></a><a name="_Toc75173143"></a><a name="_Toc75173034"></a><a name="_Toc75165425"></a><a name="_Toc74064147"></a>
+6.2.5 Работа с ролью ADDS</h3>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Работа
+с AD DS создание OU для распределения
+иерархичного хранения 
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_7ef0a00e4f2598ce.png" name="Рисунок 50" align="bottom" width="624" height="392" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Создание
+группы безопасности для пользователей
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_824c5717098079f7.png" name="Рисунок 43" align="bottom" width="624" height="387" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Создание
+пользователя для аутентификации на
+хосте <span lang="en-US">ESXi</span> и клиентской
+машине</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_4a4435e4ba6fec35.png" name="Рисунок 44" align="bottom" width="624" height="432" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Добавление
+пользователя в группу безопастности</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_d3a6c67c812487d8.png" name="Рисунок 54" align="bottom" width="624" height="325" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Создание
+и редактирование групповой политики
+для добавление группы безопасности на
+локальный компьютер 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_8f1315e01bc1171d.png" name="Рисунок 162" align="bottom" width="574" height="409" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Политика
+применяемая к компьютеру</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_5647270d4569e5cb.png" name="Рисунок 62" align="bottom" width="624" height="351" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Добавление
+группы безопасности в локальную группу</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_a59bc5ec1ce108ad.png" name="Рисунок 63" align="bottom" width="624" height="302" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Назначение
+действие политики по таргету</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_2ccc2275ab864179.png" name="Рисунок 64" align="bottom" width="624" height="341" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Добавление
+компьютера на который действую политика</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_e662ed0bac7ca7a6.png" name="Рисунок 45" align="bottom" width="624" height="376" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Проверка
+на клиенте</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_f66f15818356aaaf.png" name="Рисунок 46" align="bottom" width="624" height="449" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Настройка
+роли iSCSI для начало необходимо создать
+в DNS запить типа А с именем хоста ESXi</p>
+<p class="western" align="justify" style="margin-bottom: 0cm; line-height: 100%">
+<img src="win_server_html_9d09fdcefeb9a74.png" name="Рисунок 49" align="bottom" width="609" height="363" border="0"/>
+</p>
+<p class="western" align="justify" style="margin-bottom: 0cm; line-height: 100%">
+Автоматически определиться DNS Domain Name
+опция 015 и адрес DNS сервера опция 006</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_752219f0aa9eb849.png" name="Рисунок 254" align="bottom" width="624" height="349" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Если
+все конфигурации правильные по завершению
+всех настроек можно указать отметку на
+yes после чего DHPC scope будет включен и
+начнет свою работу</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_5c15de1398776cce.png" name="Рисунок 255" align="bottom" width="624" height="393" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">В
+качестве проверки можно зайти на клиента
+и при помощи команды ipconfig /all убедится
+в том что мы получили адрес по IPv4 с
+правильными опциями</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_2bd2ffc04ba740b.png" name="Рисунок 161" align="bottom" width="624" height="382" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" style="page-break-before: always"><a name="_Toc74064148"></a><a name="_Toc75173978"></a><a name="_Toc75173144"></a><a name="_Toc75173035"></a><a name="_Toc75165426"></a>
+6.3 Развертывание дополнительных
+инфраструктурных служб</h2>
+<h3 class="western"><a name="_Toc73977787"></a><a name="_Toc75173979"></a><a name="_Toc75173145"></a><a name="_Toc75173036"></a><a name="_Toc75165427"></a><a name="_Toc74064149"></a>
+6.3.1 Роль iSCSI</h3>
+<p class="western" align="justify" style="margin-bottom: 0cm; line-height: 100%">
+Установка роли iSCSI на сервере 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_c570ea6b4b0704af.png" name="Рисунок 57" align="bottom" width="624" height="390" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+Создание iSCSI таргита и виртуального
+диска для хоста ESXi</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_ea84a4944db11474.png" name="Рисунок 58" align="bottom" width="624" height="374" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Указание
+директории для хранение виртуального
+диска iSCSI</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_d48e0960c6dd988f.png" name="Рисунок 59" align="bottom" width="624" height="480" border="0"/>
+</p>
+<p lang="en-US" class="western" style="margin-bottom: 0.28cm; line-height: 108%">
+<br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+Указание имени виртуального диска</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_7cf0d92189e887c5.png" name="Рисунок 60" align="bottom" width="624" height="415" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Указание
+размера и типа хранения</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_f2a00f80e59477e0.png" name="Рисунок 61" align="bottom" width="624" height="416" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Создание
+нового таргета для подключения 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_184de6e4e5486b4d.png" name="Рисунок 73" align="bottom" width="624" height="352" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Тип
+и способ подключения для хостов 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_fe392ce5022792ad.png" name="Рисунок 74" align="bottom" width="624" height="486" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<h3 class="western"><a name="_Toc75165428"></a><a name="_Toc75173980"></a><a name="_Toc75173146"></a><a name="_Toc75173037"></a><a name="_Toc73977788"></a><a name="_Toc74064150"></a>
+6.3.2 Роль AD CS</h3>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Установка
+роли AD CS производится аналогично как и
+AD DS и будет служить для выдачи сертификатов</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_d449d5fbe7b26519.png" name="Рисунок 75" align="bottom" width="624" height="349" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">При
+установки роли установим так же
+дополнительно Web Enrollment для подписи
+запросов через браузер 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_fcac63a6e4f842e1.png" name="Рисунок 76" align="bottom" width="624" height="450" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+Будем использовать Enterprise CA для связки
+с доменам и доступу к распространению
+шаблонов внутри домена</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><img src="win_server_html_29cc5ea2065a0523.png" name="Рисунок 77" align="bottom" width="624" height="408" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Тип
+центра сертификации будет корневым 
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_ec3ad57e6b54f793.png" name="Рисунок 78" align="bottom" width="624" height="431" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+Сказываем срок жизни корневого сертификата
+</p>
+<p class="western" style="margin-bottom: 0.28cm; line-height: 108%"><img src="win_server_html_32cb108d2a9bbb6b.png" name="Рисунок 79" align="bottom" width="624" height="458" border="0"/>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>
